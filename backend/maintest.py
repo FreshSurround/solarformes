@@ -2,15 +2,17 @@
 from config.serial_config import Settings
 from utils.logger import get_logger
 from models.models import Indicator
-from routes.api_routes import get_indicators
+from routes.api_routes import bigRouter
 import pandas as pd
 import numpy as np
+from fastapi import FastAPI
 from auth import *
 
-# Inicialización
 config = Settings()
-# Inicializamos logger
 logger = get_logger("MainApp")
+
+##app = bigRouter()
+##app.iniciar_server()
 
 # Crear un indicador de prueba
 test_indicator = Indicator(name="Ambiente_CO2", category="Ambiente", code="CO2")
@@ -20,7 +22,6 @@ logger.info("Aplicación iniciada correctamente.")
 logger.info(f"Indicador de prueba: {test_indicator.name} = {test_indicator.code} ({test_indicator.category})")
 #print(config.DATABASE_PATH)
 ##print("======================")
-##print(get_indicators())
 #
 
 #df = pd.read_csv("Databases/WorldBank/Pais/arg/API_ARG_DS2_en_csv_v2_2866.csv", usecols=['Country Name','Country Code','Indicator Code'])
