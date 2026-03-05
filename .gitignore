@@ -1,0 +1,15 @@
+#ignore the virtual environment
+venv/
+
+#ignore the caches
+backend/__pycache__*
+backend/config/__pycache__*
+backend/routes/__pycache__*
+backend/.pytest_cache
+__pycache__*
+
+#ignore the databases
+Databases
+
+#ignore the "(sin venv)" folder
+/backend\ (sin\ venv)

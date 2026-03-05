@@ -1,18 +1,24 @@
-# main.py
-from config.serial_config import Settings
-from utils.logger import get_logger
-from models.models import Indicator
-from routes.api_routes import bigRouter
+from .config.serial_config import Settings
+from .utils.logger import get_logger
+from .models.modelss import Indicator
+from .routes.api_routes import bigRouter
 import pandas as pd
 import numpy as np
 from fastapi import FastAPI
-from auth import *
+from .auth import *
 
 config = Settings()
 logger = get_logger("MainApp")
 
-##app = bigRouter()
-##app.iniciar_server()
+app = FastAPI()
+
+@app.get("/routes/")
+def iniciar():
+    return {"hola": "hola"}
+
+'''
+router = bigRouter()
+router.iniciar_server()
 
 # Crear un indicador de prueba
 test_indicator = Indicator(name="Ambiente_CO2", category="Ambiente", code="CO2")
@@ -33,6 +39,13 @@ indicators = [Indicator(name=row['Country Name'],
     code=row['Country Code'])
     for _, row in df.iterrows()]
 
-print(*[f"{indicators[i]}\n" for i in np.linspace(0, 9, 10, dtype="int")])
+#print(*[f"{indicators[i]}\n" for i in np.linspace(0, 9, 10, dtype="int")])
+'''
 
-print("Sistema corriendo. Revisa el log para detalles.")
+
+
+#print("Sistema corriendo. Revisa el log para detalles.")
+
+
+if __name__ == "__main__":
+    main()
