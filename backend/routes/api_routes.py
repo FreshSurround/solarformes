@@ -3,11 +3,10 @@ from fastapi import APIRouter
 
 router = APIRouter()
 
-
 class bigRouter:
     def __init__(self):
         return None
-        '''
+
     @router.get("/indicators")
     def get_indicators(self):
         data = [
@@ -26,7 +25,6 @@ class bigRouter:
         ]
         filtered = [d.__dict__ for d in all_data if d.category.lower() == category.lower()]
         return filtered
-        '''
 
-def iniciar_server(self):
-    return {"hola2": "hola2"}
+    def iniciar_server(self):
+        return {"hola2": "hola2"}
