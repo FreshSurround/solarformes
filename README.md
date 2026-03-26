@@ -8,7 +8,7 @@ Web application for creating, organizing, and exporting data visualizations base
 
 ## Demo
 
-<video src="assets/'Solarformes0-1.gif'" autoplay loop muted playsinline width="600"></video>
+![DEMO](assets/'Solarformes0-1.gif')
 
 ---
 
