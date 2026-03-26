@@ -8,7 +8,7 @@ Web application for creating, organizing, and exporting data visualizations base
 
 ## Demo
 
-<video src="assets/'Solarformes 0.1.mp4'" autoplay loop muted playsinline width="600"></video>
+<video src="assets/'Solarformes0-1.mp4'" autoplay loop muted playsinline width="600"></video>
 
 ---
 
@@ -116,9 +116,7 @@ Metrics: GDP growth, inflation, unemployment, population
 
 ---
 
-## [🎨 Personalización
-
-### Cambiar Colores](Customization
+## Personalization
 Colors: edit static/css/style.css
 Chart types: edit CONFIG.CHART_TYPES in config.js
 
@@ -157,3 +155,9 @@ python -m uvicorn main:app --reload --host 0.0.0.0 --port 8001
 GET /api/metrics → list available metrics
 GET /api/data/{metric} → data for a metric
 GET /api/all-data → all datasets
+
+---
+
+## LICENSE
+
+See [Licence](License)
